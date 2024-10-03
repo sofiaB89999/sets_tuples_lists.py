@@ -210,30 +210,30 @@
 
 
 
-#######################tuples challenge#####################
-# Challenge: Count the number of occurrences of the character 'v' in the text below.
-# The text is converted to a tuple of characters and the target characters are 'v' and 'V'.
-# The result is output to the console.
-#queue the videos(2)
-text = """Voilà! In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate.
-This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valorous visitation
-of a by-gone vexation stands vivified, and has vowed to vanquish these venal and virulent vermin vanguarding vice and
-vouchsafing the violently vicious and voracious violation of volition.
+# #######################tuples challenge#####################
+# # Challenge: Count the number of occurrences of the character 'v' in the text below.
+# # The text is converted to a tuple of characters and the target characters are 'v' and 'V'.
+# # The result is output to the console.
+# #queue the videos(2)
+# text = """Voilà! In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate.
+# This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valorous visitation
+# of a by-gone vexation stands vivified, and has vowed to vanquish these venal and virulent vermin vanguarding vice and
+# vouchsafing the violently vicious and voracious violation of volition.
 
 
-The only verdict is vengeance; a vendetta, held as a votive, not in vain, for the value and veracity of such shall one day
-vindicate the vigilant and the virtuous.
+# The only verdict is vengeance; a vendetta, held as a votive, not in vain, for the value and veracity of such shall one day
+# vindicate the vigilant and the virtuous.
 
 
-Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it is my very good honor to meet you
-and you may call me V."""
+# Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it is my very good honor to meet you
+# and you may call me V."""
 
 
-# Convert the text to a tuple of characters
-text_tuple = tuple(text)
-print (text_tuple)
-capital_v = (text_tuple.count('v'))
-small_v =(text_tuple.count('V'))
+# # Convert the text to a tuple of characters
+# text_tuple = tuple(text)
+# print (text_tuple)
+# capital_v = (text_tuple.count('v'))
+# small_v =(text_tuple.count('V'))
 
 
 # Tuple to store the target characters
@@ -258,26 +258,43 @@ small_v =(text_tuple.count('V'))
 # Define the dictionary
 
 
+
 sample_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 # get length of the list
 print(len(sample_list)) # Output: 3
 #this is called a nested list
 # Extract and print the second element from the first list
-
+#DONT FORGET THAT COMPUTERS START COUNTING FROM ZERO
+#THE FIRST BOX REPRESENTS THE LIST FROM WITHIN THE BIG LIST AND THE SECOND BOX IS REFERING TO THE ITEM
+print (sample_list[0] [1]) #output : 2
+print (sample_list [1] [2]) #output: 6
+print (sample_list [2] [0]) #output: 7
+print (sample_list [0] [0]) #output: 1
+print(sample_list [2] [1]) #output: 8
 
 sample_list_of_fruit = {"fruits": ["apple", "banana", "cherry"]}
-# Extract and print the second fruit from the list
+# Extract and print the second fruit from the list\
+#it is print, goes to dictionary, and then to the item you desire
+print (sample_list_of_fruit["fruits"] [1])
+print (sample_list_of_fruit["fruits"] [-1])
+print (sample_list_of_fruit ["fruits"] [0])
 
 
 sample_list_of_lists = {"lists": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
 # Extract and print the third element from the second list
-
+# it first prints, takes you to the dictionary, then to the big list, then to one of the little lists, and finally the item you desireprin
+print (sample_list_of_lists["lists"] [1] [2])
+print (sample_list_of_lists ["lists"] [2] [1])
+print (sample_list_of_lists ["lists"] [0] [2])
+print (sample_list_of_lists ["lists"] [2] [0])
 
 
 
 sample_list_of_dicts = {"dicts": [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}, {"name": "Charlie", "age": 35}]}
 # Extract and print the age of the second person
-
+print (sample_list_of_dicts["dicts"] [1] ["age"]) #output: 30
+print (sample_list_of_dicts ["dicts"] [2] ["name"]) 
+# print (sample_list_of_lists ["dicts"] [0] ["age"])
 
 
 
@@ -291,6 +308,10 @@ data = {
 
 # Extract and print the second item from the 'tropical' list
 print(data["fruits"]["tropical"][1])  # Output: 'pineapple'
+print (data["fruits"] ["berries"] [2])
+print (data ["prices"] ["mango"])
+print (data ["prices"] ["banana"])
+
 
 
 
@@ -304,6 +325,9 @@ info = {
 
 # Extract and print the coach's name
 print(info["team"]["coach"]["name"])  # Output: 'John Doe'
+print (info["team"] ["coach"] ["age"])
+print (info["team"] ["players"] [0])
+print (info ["location"])
 
 
 
@@ -325,7 +349,11 @@ company = {
 
 # Extract and print the second employee from the 'Engineering' department
 print(company["departments"]["Engineering"]["employees"][1])  # Output: 'Noah'
-
+first_budget = (company["departments"] ["HR"] ["budget"])
+second_budget= (company["departments"] ["Engineering"] ["budget"])
+total_budget = first_budget + second_budget
+print (total_budget)
+#I CAN'T BELIEVE I ACTUALLY GOT IT RIGHT ON THE FIRST TIME LIKE ASHEJHGREFLJHGFRGFER
 
 # Define the dictionary
 school = {
